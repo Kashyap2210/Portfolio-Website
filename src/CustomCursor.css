@@ -1,0 +1,36 @@
+* {
+  cursor: none !important; /* Hide default cursor */
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #ff7733;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  transform: translate(-50%, -50%);
+}
+.custom-cursor-dark {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-inner {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #ff7733;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100001;
+}

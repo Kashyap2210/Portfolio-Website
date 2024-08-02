@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Oswald", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: #d8cbc7; */
+}
+
+.custom-shadow {
+  @apply shadow; /* Apply the base shadow class for compatibility */
+  box-shadow: 0 0 5px 5px rgb(245, 8, 8);
+}
+
+.darkmode {
+  /* Border color for outlined input */
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    @apply border-lotus_gold !important;
+  }
+
+  /* Border color for focused outlined input */
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    @apply text-lotus_gold border-lotus_gold !important;
+  }
+
+  /* Label color */
+  .MuiFormLabel-root.MuiInputLabel-root {
+    @apply text-lotus_gold !important;
+  }
+
+  /* Optionally, target the focused state for labels */
+  .MuiFormLabel-root.Mui-focused {
+    @apply text-lotus_gold !important;
+  }
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  @apply border-navbarColor cursor-none !important;
+}
+
+/* Border color for focused outlined input */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  @apply border-navbarColor cursor-none !important;
+}
+
+/* Label color */
+.MuiFormLabel-root.MuiInputLabel-root {
+  @apply text-black cursor-none !important;
+}
+
+/* Optionally, target the focused state for labels */
+.MuiFormLabel-root.Mui-focused {
+  @apply text-black !important;
+}
+
+.fixed-navigation-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem; /* Adjust width if needed */
+  height: 3rem; /* Adjust height if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  color: #261132;
+  z-index: 1000; /* Ensure the button is above other elements */
+}
+
+.fixed-navigation-button-dark {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem; /* Adjust width if needed */
+  height: 3rem; /* Adjust height if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f7a920;
+  background-color: black;
+  border-radius: 50%;
+  color: #f7a920;
+  z-index: 1000; /* Ensure the button is above other elements */
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    display: none;
+  }
+  .introduction {
+    font-size: 1rem;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    padding-top: 5rem;
+    width: 100svw;
+    /* margin-bottom: 2rem; */
+  }
+  .overlapping-buttons {
+    margin-bottom: 2rem;
+  }
+  .sm-devices-font-size {
+    width: 100% !important;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  .lhs-intro {
+    /* margin: 1rem; */
+    margin-top: 5rem;
+    width: 100svw !important;
+    /* padding: 1rem; */
+  }
+  .sm-devices-profile-pic {
+    width: 100svw;
+  }
+  .sm-devices-typed-js {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+  }
+  .sm-devices-button {
+    width: 100% !important;
+    margin-left: 0rem !important;
+  }
+  .sm-devices-arrows,
+  .sm-scrollToTop {
+    display: none !important;
+  }
+  .sm-devices-skills {
+    /* height: 100svh; */
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+  .sm-devices-profile-pic {
+    margin-inline: 0rem;
+    margin-left: auto;
+  }
+  .sm-devices-image {
+    height: 15rem;
+    width: 15rem;
+    margin-inline: auto;
+  }
+  .sm-devices-cursor {
+    display: none;
+  }
+  .sm-devices-textfields {
+    margin-inline: 0rem;
+    padding-inline: 2.75rem;
+  }
+  .sm-devices-footer-line-1 {
+    font-size: 0.8rem !important;
+  }
+  .sm-devices-footer-line-2 {
+    margin-inline: auto;
+    font-size: 0.5rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    display: none;
+  }
+  .introduction {
+    font-size: 1rem;
+    flex-direction: column;
+    padding-top: 5rem;
+    width: 100%;
+  }
+  .sm-devices-font-size {
+    width: 100% !important;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  .lhs-intro {
+    margin-top: 5rem;
+    width: 100% !important;
+  }
+  .sm-devices-profile-pic {
+    width: 100%;
+  }
+  .sm-devices-typed-js {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+  }
+  .sm-devices-button {
+    width: 100% !important;
+    margin-left: 0rem !important;
+    text-align: center;
+    background-color: #261132;
+    color: #fff;
+  }
+  .sm-devices-arrows,
+  .sm-scrollToTop {
+    display: none !important;
+  }
+  .sm-devices-skills {
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+  .sm-devices-profile-pic {
+    margin-inline: 0rem;
+    margin-left: auto;
+  }
+  .sm-devices-image {
+    height: 15rem;
+    width: 15rem;
+    margin-inline: auto;
+  }
+  /* .sm-devices-cursor {
+    display: none;
+    } */
+  .sm-devices-textfields {
+    margin-inline: 0rem;
+    padding-inline: 2.75rem;
+  }
+  .sm-devices-footer-line-1 {
+    font-size: 0.8rem !important;
+  }
+  .sm-devices-footer-line-2 {
+    margin-inline: auto;
+    font-size: 0.5rem !important;
+  }
+  .overlapping-buttons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    background-color: #261132;
+    color: #fff;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  .navbar {
+    font-size: 1rem;
+    height: 5.5rem;
+    width: 100%;
+    z-index: 10000;
+    /* margin-bottom: 2rem; */
+  }
+  .introduction {
+    font-size: 1.25rem;
+    /* margin-bottom: 2rem; */
+  }
+  .sm-devices-font-size {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  .sm-devices-typed-js {
+    font-size: 2rem;
+    margin-top: 1.25rem;
+  }
+  .sm-devices-image {
+    height: 15rem;
+    width: 15rem;
+    margin-inline: auto;
+    margin-top: 3rem;
+  }
+  .sm-devices-arrows {
+    display: block !important;
+  }
+  .sm-devices-button {
+    display: inline-block;
+    margin-right: 2rem !important;
+    width: 25% !important;
+    /* margin-inline: auto !important; */
+    /* text-align: center; */
+    background-color: #261132;
+    color: #fff;
+  }
+
+  .sm-devices-skills {
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+  .overlapping-buttons {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  .navbar-992 {
+    display: flex;
+    width: 100% !important;
+    z-index: 10000;
+    /* flex: none !important; */
+    font-size: 1rem;
+    height: 5.5rem;
+    /* margin-bottom: 2rem; */
+  }
+  .introduction {
+    font-size: 1.5rem;
+  }
+  .sm-devices-font-size {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  .sm-devices-typed-js {
+    font-size: 2.25rem;
+    margin-top: 1.5rem;
+  }
+  .sm-devices-button {
+    width: 25% !important;
+    margin-left: 0rem !important;
+    z-index: 2000;
+    background-color: #261132;
+    color: #fff;
+  }
+  .sm-scrollToTop {
+    display: block !important;
+  }
+  .sm-devices-skills {
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+  .overlapping-buttons {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    background-color: #261132;
+    color: #fff;
+  }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+  .navbar-992 {
+    display: flex;
+    width: 100% !important;
+    z-index: 10000;
+    font-size: 1rem;
+    height: 5.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* margin-bottom: 2rem; */
+  }
+  .introduction {
+    font-size: 1.75rem;
+  }
+  .sm-devices-font-size {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .sm-devices-typed-js {
+    font-size: 2.5rem;
+    margin-top: 1.75rem;
+  }
+  .sm-devices-skills {
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+  .overlapping-buttons {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    background-color: #261132;
+    color: #fff;
+  }
+}
+
+/* Extra extra large devices (≥1400px) */
+@media (min-width: 1400px) {
+  .navbar {
+    display: flex;
+    z-index: 10000;
+    width: 100% !important;
+    font-size: 1rem;
+    /* width: 100svw !important; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .introduction {
+    font-size: 2rem;
+    /* margin-bottom: 2rem; */
+  }
+  .sm-devices-font-size {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+  .sm-devices-typed-js {
+    font-size: 2.75rem;
+    margin-top: 2rem;
+  }
+  .sm-devices-skills {
+    padding-top: 20rem !important;
+    padding-bottom: 20rem !important;
+  }
+}
