@@ -5,6 +5,7 @@ import Onlineresume from "./assets/Onlineresume.png";
 import Amazonuiclone from "./assets/Amazonuiclone.png";
 import Todoapp from "./assets/Todoapp.png";
 import Portfolio from "./assets/Portfolio Website.png";
+import kyakhanahaiImage from "./assets/kyakhanahaiImage.png";
 import "./index.css";
 import "./CustomCursor.css";
 
@@ -16,7 +17,13 @@ export default function Projects({ isDarkMode }) {
       } min-h-screen py-20 flex flex-wrap justify-center gap-4`}
     >
       {/* A card element starts from here */}
-
+      <Projectcard
+        imgSource={kyakhanahaiImage}
+        githubLink={"https://github.com/Kashyap2210/kyakhanahai_frontend"}
+        demoLink={"https://kyakhanahai-frontend.onrender.com"}
+        description={"MERN Stack Website for food suggestions."}
+        isDarkMode={isDarkMode}
+      />
       <Projectcard
         imgSource={Dictionaryapp}
         githubLink={
