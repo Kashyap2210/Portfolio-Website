@@ -1,10 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Portfolio-Website/",
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    rollupOptions: {
+      input: "/index.html",
+    },
+  },
+  base: "/",
 });
